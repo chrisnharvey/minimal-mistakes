@@ -1,0 +1,12 @@
+{
+    "name": "chrisnharvey/minimal-mistakes",
+    "description": "Minimal Mistakes theme for Sculpin static site generator.",
+    "type": "sculpin-theme",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Chris Harvey",
+            "email": "chris@chrisnharvey.com"
+        }
+    ]
+}
