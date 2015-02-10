@@ -1,5 +1,7 @@
 {% if page.author %}
-  {% set author = site.data.authors[page.author] %}{% else %}{% set author = site.owner %}
+    {% set author = site.data.authors[page.author] %}
+{% else %}
+    {% set author = site.owner %}
 {% endif %}
 
 <div itemscope itemtype="http://schema.org/Person">
