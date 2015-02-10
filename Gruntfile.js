@@ -53,12 +53,23 @@ module.exports = function(grunt) {
           '<%= jshint.all %>'
         ],
         tasks: ['jshint','uglify']
+      },
+      sculpin: {
+        files: [
+          '_includes/*',
+          '_layouts/*'
+        ],
+        tasks: ['sculpin-generate']
       }
     },
     clean: {
       dist: [
         'assets/js/scripts.min.js'
       ]
+    },
+    'sculpin-generate': {
+      options: {},
+      build: {}
     }
   });
 
@@ -69,6 +80,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-svgmin');
+  grunt.loadNpmTasks('grunt-sculpin');
 
   // Register tasks
   grunt.registerTask('default', [
