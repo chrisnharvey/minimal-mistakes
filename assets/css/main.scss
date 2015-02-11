@@ -1,7 +1,3 @@
----
-sitemap: false
----
-
 /*
  *
  *  Minimal Mistakes
@@ -12,17 +8,17 @@ sitemap: false
 */
 
 // Partials
-@import "variables";
-@import "grid";
-@import "mixins";
-@import "normalize";
-@import "site";
-@import "typography";
-@import "pygments";
-@import "coderay";
-@import "elements";
-@import "forms";
-@import "page";
-@import "vendor/font-awesome/font-awesome";
-@import "vendor/magnific-popup/magnific-popup";
+@import "../sass/variables";
+@import "../sass/grid";
+@import "../sass/mixins";
+@import "../sass/normalize";
+@import "../sass/site";
+@import "../sass/typography";
+@import "../sass/pygments";
+@import "../sass/coderay";
+@import "../sass/elements";
+@import "../sass/forms";
+@import "../sass/page";
+@import "../sass/vendor/font-awesome/font-awesome";
+@import "../sass/vendor/magnific-popup/magnific-popup";
 //@import "vendor/google/fonts";
