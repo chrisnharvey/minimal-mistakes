@@ -60,6 +60,12 @@ module.exports = function(grunt) {
           '_layouts/*'
         ],
         tasks: ['sculpin-generate']
+      },
+      sass: {
+        files: [
+          'assets/css/main.scss'
+        ],
+        tasks: ['sass']
       }
     },
     clean: {
@@ -70,6 +76,16 @@ module.exports = function(grunt) {
     'sculpin-generate': {
       options: {},
       build: {}
+    },
+    sass: {                              // Task
+      dist: {                            // Target
+        options: {                       // Target options
+          style: 'expanded'
+        },
+        files: {                         // Dictionary of files
+          'assets/css/main.css': 'assets/css/main.scss'       // 'destination': 'source'
+        }
+      }
     }
   });
 
@@ -78,6 +94,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-svgmin');
   grunt.loadNpmTasks('grunt-sculpin');
