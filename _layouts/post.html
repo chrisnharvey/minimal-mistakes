@@ -41,7 +41,7 @@
       {% endif %}
     </div><!--/ .headline-wrap -->
     <div class="article-wrap">
-      {{ content }}
+      {{ page.blocks.content|raw }}
       <hr />
       <footer role="contentinfo">
         {% if page.share != false %}{% include "social-share" %}{% endif %}
