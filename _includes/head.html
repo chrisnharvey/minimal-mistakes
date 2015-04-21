@@ -21,18 +21,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- For all browsers -->
-<link rel="stylesheet" href="{{ site.url }}/assets/css/main.css">
+{% for stylesheet in theme_paths("assets/css/main.css") %}
+    <link href="{{ site.url }}/{{ stylesheet }}" rel="stylesheet" media="screen">
+{% endfor %}
 
 <meta http-equiv="cleartype" content="on">
 
 <!-- HTML5 Shiv and Media Query Support -->
 <!--[if lt IE 9]>
-	<script src="{{ site.url }}/assets/js/vendor/html5shiv.min.js"></script>
-	<script src="{{ site.url }}/assets/js/vendor/respond.min.js"></script>
+    {% for js in theme_paths("assets/js/vendor/html5shiv.min.js") %}
+        <script src="{{ site.url }}/{{ js }}"></script>
+    {% endfor %}
+    {% for js in theme_paths("assets/js/vendor/respond.min.js") %}
+        <script src="{{ site.url }}/{{ js }}"></script>
+    {% endfor %}
 <![endif]-->
 
 <!-- Modernizr -->
-<script src="{{ site.url }}/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+{% for js in theme_paths("assets/js/vendor/modernizr-2.7.1.custom.min.js") %}
+    <script src="{{ site.url }}/{{ js }}"></script>
+{% endfor %}
 
 <link href='//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700%7CPT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
 
