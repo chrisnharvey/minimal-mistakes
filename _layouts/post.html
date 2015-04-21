@@ -48,7 +48,7 @@
         <p class="byline"><strong>{{ page.title }}</strong> was published on <time datetime="{{ page.date }}">{{ page.date|date('jS M Y') }}</time>{% if page.modified %} and last modified on <time datetime="{{ page.modified }}">{{ page.modified|date('jS M Y') }}</time>{% endif %}.</p>
       </footer>
     </div><!-- /.article-wrap -->
-  {% if site.owner.disqus-shortname and page.comments %}
+  {% if site.owner.disqus and page.comments %}
     <section id="disqus_thread"></section><!-- /#disqus_thread -->
   {% endif %}
   </article>
